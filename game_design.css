@@ -1,0 +1,472 @@
+body {
+  background-color: rgb(240, 240, 240);
+ 
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+}
+
+.effect_click_times {
+  animation: color-change alternate 0.225s;
+  transition: 0.225s;
+}
+
+@keyframes color-change {
+  from {
+    color: rgb(120, 190, 33);
+  }
+
+ 
+  to {
+    color: black;
+  }
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  background-image: linear-gradient(aliceblue, azure, rgba(173, 216, 230, 0.5));
+  padding: 30px;
+  border: 1px solid gray;
+  border-radius: 2.5px;
+  box-shadow: 3px 3px 1px rgba(220, 220, 220, 0.6);
+  outline: 1.5px solid lightgray;
+  outline-offset: 4.5px;
+  z-index: -2;
+}
+
+h1 {
+  font-family: arial;
+  font-size: 26.5px;
+  margin: 0;
+  letter-spacing: -0.25px;
+  text-decoration: underline;
+  font-style: italic;
+  width: fit-content;
+}
+
+h1:hover {
+  color: dimgray;
+}
+
+.description_Para {
+  font-family: Arial Narrow, sans-serif;
+  letter-spacing: 0.75px;
+}
+
+#InfoGame {
+  font-weight: bolder;
+  font-family: arial;
+  transition: 0.2s;
+}
+
+#InfoGame:hover {
+  color: rgb(75, 75, 75);
+}
+
+.WinSpan {
+  color: gold;
+  font-family: arial;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  -webkit-text-stroke: 0.2px dimgray;
+}
+
+#BtnGame {
+  border: 2px solid black;
+  background-color: #FF4500;
+  font-weight: bold;
+  color: white;
+  border-radius: 2.5px;
+  display: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#BtnGame:hover {
+  background-color: tomato;
+  color: azure;
+  transition: 0.01s;
+}
+
+#BtnGame:active {
+  background-color: linear-gradient(tomato, red);
+  border: 2px solid #eb3f00;
+  color: lime;
+}
+
+#buttons_difficulties {
+  display: block;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#buttons_difficulties button {
+  background-color: rgb(100, 100, 100);
+  transition: 0.1s;
+  border-radius: 2.5px;
+  margin-right: 1.85px;
+  margin-left: 1.85px;
+  box-shadow: 3px 2px 3px gray;
+ 
+}
+
+#buttons_difficulties button:hover {
+  background-color: rgb(117.5, 117.5, 117.5);
+}
+
+#buttons_difficulties button:disabled {
+  opacity: 0.7;
+  cursor: auto;
+}
+
+#menu_back {
+  font-family: arial;
+  font-weight: bold;
+  background-color: aliceblue;
+ 
+  margin-bottom: -7.25px;
+}
+
+#menu_back:hover {
+  background-color: rgb(200, 240, 250);
+ 
+  border-radius: 2.5px;
+}
+
+.RestartBtn {
+  background-color: royalblue;
+  color: white;
+  width: fit-content;
+}
+
+.RestartBtn:hover {
+  background-color: rgba(65, 105, 225, 0.8);
+  border-radius: 2.5px;
+}
+
+.EndingBtns {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: fit-content;
+}
+
+.EndingBtns>button {
+  display: none;
+  transition: 0.15s;
+  padding: 3px;
+}
+
+#Easy {
+  color: limegreen;
+}
+
+#Medium {
+  color: yellow;
+}
+
+#Hard {
+  color: red;
+ 
+}
+
+#buttons_difficulties hr {
+  padding: 1.25px;
+  width: 250px;
+  border: 1px solid dimgray;
+  background-color: lightgray;
+  border-radius: 6px;
+}
+
+.SpecialDiff {
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#Impossible {
+  color: crimson;
+  font-weight: bold;
+}
+
+#Random {
+  color: lightblue;
+}
+
+#Challenge {
+  color: yellowgreen;
+}
+
+#textSub {
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: -1px;
+  text-shadow: 3px 3px 3.5px dimgray;
+  -webkit-text-stroke: 0.25px black;
+  background-image: linear-gradient(royalblue, rgba(65, 105, 225, 0.875));
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2.5px;
+  color: white;
+  outline: 3px solid white;
+  font-family: system-ui;
+  margin-top: 0;
+}
+
+#customize {
+  color: white;
+  border-radius: 5px;
+}
+
+.Customize-Container {
+  text-align: center;
+  border: 1px solid black;
+  margin: 15px;
+  padding: 15px;
+  display: none;
+  font-family: calibri;
+  box-shadow: 3px 2px 3px gray;
+  background-color: azure;
+}
+
+.Customize-Container label {
+  display: block;
+  margin: 10px auto 10px auto;
+  text-align: center;
+}
+
+.Customize-Container input[type=number] {
+  border: 2px solid dimgray;
+}
+
+.Customize-Container button {
+  margin-top: 10px;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: purple;
+  color: white;
+}
+
+#MusicSelect {
+  border: 2px solid black;
+  width: fit-content;
+  padding: 5px;
+}
+
+#text_on_game {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  display: none;
+  margin-bottom: 0;
+  text-transform: capitalize;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+#TimeoutMsg {
+  display: none;
+  text-align: center;
+  color: red;
+  margin-top: 10px;
+ 
+  font-size: 20px;
+  font-weight: bold;
+  font-family: system-ui;
+}
+
+.TimerRunning {
+  display: none;
+  text-align: center;
+  font-family: system-ui;
+  background-color: purple;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  color: white;
+  margin-bottom: 0;
+}
+
+#winMessage {
+  background-color: rgb(195, 195, 195);
+  width: 120px;
+  padding: 5px;
+  border-radius: 2.5px;
+ 
+  font-size: 17px;
+  outline: 2px solid dimgray;
+  display: none;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgb(140, 245, 40);
+  -webkit-text-stroke: 0.425px black;
+  font-weight: bold;
+  text-shadow: 3px 3px 4px dimgray;
+  font-family: verdana;
+}
+
+.settings_bth {
+  color: white;
+  display: block;
+  z-index: 2;
+  width: 120px;
+ 
+  border-radius: 15px;
+  background-color: green;
+  border: 2.5px solid white;
+  font-family: verdana;
+  margin-bottom: -2.5px;
+  margin-top: -7.5px;
+  padding: 2.5px;
+ 
+  transition: 0.3s;
+}
+
+.settings_bth:hover {
+  background-color: rgba(0, 128, 0, 0.85);
+}
+
+.settings_menu {
+  background-color: white;
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 1;
+  border: 1.5px solid gray;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 6.5px gray;
+}
+
+.settings_menu button {
+  user-select: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.settings_bth_back {
+  display: block;
+  color: white;
+  text-transform: uppercase;
+  font-family: verdana;
+  border: 0;
+  background-color: gray;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: 0.2s;
+ 
+}
+
+.settings_bth_back:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.disable_music_bth {
+  display: none;
+  border-radius: 5px;
+  font-family: cursive;
+  text-transform: uppercase;
+  background-color: rgba(124, 185, 232, 0.4);
+  transition: 0.2s;
+}
+
+.disable_music_bth:hover {
+  background-color: rgba(124, 185, 232, 0.55);
+}
+
+.disable_timer {
+  text-transform: capitalize;
+  background-color: brown;
+  color: white;
+}
+
+.disable_timer:hover {
+  background-color: sienna;
+}
+
+noscript {
+  text-align: center;
+  margin-top: 20px;
+  color: red;
+  text-transform: uppercase;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  margin-bottom: -10px;
+}
+
+.amount_clicks,
+.reach-point {
+  font-family: arial;
+  font-size: 15px;
+}
+
+.click-area {
+  background-color: blue;
+  width: 300px;
+  height: 150px;
+  border: 2px solid black;
+  border-radius: 2px;
+  display: none;
+  margin-right: auto;
+  margin-left: auto;
+ 
+}
+
+.click-area:active {
+  background-color: royalblue;
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+}
+
+.loop_select {
+  display: none;
+}
+
+@media only screen and (max-width: 1400px) {
+  #textSub {
+    margin-top: 15px;
+  }
+
+  #buttons_diffculties button {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .settings_menu {
+    width: 20%;
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #buttons_diffculties button {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}

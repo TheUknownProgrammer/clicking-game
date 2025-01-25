@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://img.freepik.com/free-vector/simple-gradient-background-vector-winter-blue-pink_53876-105768.jpg?w=2000"
+      sizes="16x16"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="video game,clicker game,website game" />
+    <meta
+      name="description"
+      content="a website game that you should click to win!"
+    />
+    <meta name="author" content="TheUnknownProgrammer" />
+    <title>Simple Game</title>
+    <link rel="stylesheet" href="game_design.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Simple Game</h1>
+      <p class="description_Para">
+        Some Description about the game. This game is a short and fun game that
+        you (the player) needs to press the button some amount of clicks
+        (Depends on the difficulty mode) to win.
+      </p>
+
+      <p>
+        You need to press on the button
+        <span id="InfoGame">(difficulty mode)</span>
+        <!--times-->
+        in order to <span class="WinSpan">Win</span>.
+      </p>
+
+      <button class="settings_bth">Game Settings</button>
+
+      <div class="Customize-Container">
+        <p>Enter The Clicks Number Required To Win:</p>
+        <input
+          type="number"
+          id="ClicksAmount"
+          placeholder="Clicks Number:"
+          oninput="updateValue()"
+          min="1"
+          maxlength="60"
+        />
+
+        <p>Enter The Timer In Seconds (Not A Must):</p>
+        <input
+          type="number"
+          id="TimerGame"
+          placeholder="Timer:"
+          min="1"
+          maxlength="60"
+        />
+
+        <p>Choose A Music:</p>
+        <input
+          type="file"
+          id="MusicSelect"
+          onchange="loop_display()"
+          accept=".mp3, .wav"
+        />
+        <!-- add a checkbox that have the label of loop. if checked, the audio that the user select repeats itself after it finishes -->
+
+        <div class="loop_select">
+          <p for="loop">loop</p>
+          <input type="checkbox" name="loop" id="check_loop" />
+        </div>
+
+        <br />
+        <button class="StartCustomize">Start Game</button>
+        <button class="RndCustomize">Random Clicks/Timer</button>
+        <button class="BackCustomize">Back</button>
+      </div>
+
+      <h2 id="textSub">choose the diffculty of the game</h2>
+
+      <div id="buttons_difficulties">
+        <button id="Easy">Easy</button>
+        <button id="Medium">Medium</button>
+        <button id="Hard">Hard</button>
+        <button id="Impossible">Impossible</button>
+        <hr />
+        <div class="SpecialDiff">
+          <button id="Random">Random</button>
+          <button id="Challenge">Challenge</button>
+          <button id="customize">Customize</button>
+          <!--onmousemove="CustomizeHover()"-->
+        </div>
+      </div>
+
+      <button id="BtnGame">Button</button>
+
+      <p id="TimeoutMsg">Time out!</p>
+      <p id="text_on_game">
+        You clicked on the button <span class="amount_clicks">0</span>/<span
+          class="reach-point"
+        ></span>
+        Times
+      </p>
+      <p class="TimerRunning"></p>
+      <p id="winMessage">You won!</p>
+
+      <div class="EndingBtns">
+        <button id="menu_back" onclick="Back_To_Menu()">Back To Menu</button>
+        <button class="RestartBtn" onclick="Restart_Game()">Restart</button>
+      </div>
+
+      <noscript
+        >sorry user, you cannot play this game when javascript is blocked or
+        disabled.</noscript
+      >
+    </main>
+
+    <div class="settings_menu">
+      <button class="settings_bth_back" title="Back To Main Menu">
+        back &rarr;
+      </button>
+      <button class="disable_music_bth" title="Click To Disable Music In Game">
+        disable music
+      </button>
+      <button class="disable_timer" title="Click To Disable Timer In Game.">
+        disable timer
+      </button>
+    </div>
+
+    <script
+      type="text/javascript"
+      defer="true"
+      src="game_functions.js"
+    ></script>
+  </body>
+</html>
